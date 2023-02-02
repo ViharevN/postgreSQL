@@ -55,5 +55,11 @@ public class LoadDataImpl implements LoadData {
         preparedStatement.setInt(5, employee.getId());
         preparedStatement.executeUpdate();
     }
+    @Override
+    public void deleteEmployee(int id) throws SQLException {
+        PreparedStatement statement = connection.prepareStatement("DELETE FROM employee WHERE id = ?");
+        statement.setInt(1, id);
+        statement.executeUpdate();
+    }
 
 }

@@ -30,4 +30,9 @@ public class BdCondroller {
     public void updateEmployee(@RequestBody Employee employee) throws SQLException {
         loadData.updateEmployee(employee);
     }
+
+    @DeleteMapping
+    public void deleteEmployee(@RequestParam int id) throws SQLException {
+        loadData.deleteEmployee(id);
+    }
 }

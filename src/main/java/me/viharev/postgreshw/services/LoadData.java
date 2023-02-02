@@ -11,4 +11,6 @@ public interface LoadData {
     void addEmployee(Employee employee) throws SQLException;
 
     void updateEmployee(Employee employee) throws SQLException;
+
+    void deleteEmployee(int id) throws SQLException;
 }
